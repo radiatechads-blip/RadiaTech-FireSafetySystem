@@ -47,11 +47,12 @@ const reasons = [
 ];
 
 const highlights = [
-  "One of the rare companies in India not blacklisted by any client or consultant.",
-  "Grade A licensed by the fire department.",
-  "Presence across PAN India.",
-  "High concentration on quality management systems and safety.",
-  "Advanced systems, processes, and custom software for project tracking, planning, and execution.",
+  "🔥 End-to-End Fire Protection Solutions",
+  "🛡️ Life & Asset Protection First ",
+  "🚨 Complete Fire & Safety Portfolio",
+  "🏗️ Customized Engineering Approach",
+  "⚙️ Professional Execution & Project Management ",
+  "👤 Single Point Responsibility"
 ];
 
 export default function WhyUsPage() {
@@ -127,7 +128,7 @@ export default function WhyUsPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="rounded-[2rem] border border-gray-100 bg-gradient-to-br from-red-700 to-red-900 p-8 text-white shadow-2xl shadow-red-900/20 lg:p-12">
             <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold">What’s special about Extinct Fire Engineers?</h2>
+              <h2 className="text-3xl font-bold">What’s special about Radiatech Electra Fire and safety solution??</h2>
               <ul className="mt-8 space-y-4 text-lg text-red-50">
                 {highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3">
