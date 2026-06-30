@@ -1,52 +1,44 @@
-import Link from "next/link";
-import Image from "next/image";
-import { 
-  X, 
-  Mail, 
-  ShieldCheck,  
-  Headset,
-  CheckCircle2,
-  Award,
-  Droplets,
-  AlarmClockCheck,
-  ShieldAlert,
-  Flame,
-  Bell,
-  DraftingCompass,
-  ClipboardCheck,
-  MessageCircle,
-} from "lucide-react";
-import {
-  Shield,
-  Settings,
-  Clock,
-  Tag,
-  Users,
-  Truck,
-  Calendar,
-  CheckCircle,
-  ArrowRight,
-  ChevronRight,
-  Phone,
-  Factory,
-  Wrench,
-  Toolbox,
-  ZodiacAquarius
-} from "lucide-react";
-import { companyInfo } from "@/data/company";
-import {
-  getPublicCategories,
-  getPublicFeaturedProducts,
-  getPublicNewArrivals,
-} from "@/lib/publicProducts";
-import { getPublicServiceSpecializations } from "@/lib/publicSpecializations";
-import { ReactElement } from "react";
-import { getPublicProjectImages } from "@/lib/publicGalleries";
-import { getRecentPublishedBlogs, parseBlogImages } from "@/lib/publicBlogs";
+import EnquiryButton from "@/components/EnquiryButton";
 import ExpandableGallery from "@/components/ExpandableGallery";
 import InquiryForm from "@/components/InquiryForm";
-import EnquiryButton from "@/components/EnquiryButton";
-import RatingSummary from "@/components/RatingSummary";
+import { companyInfo } from "@/data/company";
+import { getRecentPublishedBlogs, parseBlogImages } from "@/lib/publicBlogs";
+import { getPublicProjectImages } from "@/lib/publicGalleries";
+import {
+    getPublicCategories,
+    getPublicFeaturedProducts,
+    getPublicNewArrivals,
+} from "@/lib/publicProducts";
+import { getPublicServiceSpecializations } from "@/lib/publicSpecializations";
+import {
+    AlarmClockCheck,
+    ArrowRight,
+    Award,
+    Bell,
+    Calendar,
+    CheckCircle,
+    CheckCircle2,
+    ChevronRight,
+    ClipboardCheck,
+    Clock,
+    DraftingCompass,
+    Droplets,
+    Flame,
+    Headset,
+    MessageCircle,
+    Phone,
+    Settings,
+    Shield,
+    ShieldAlert,
+    ShieldCheck,
+    Tag,
+    Toolbox,
+    Truck,
+    Users,
+    ZodiacAquarius
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const dynamic = "force-dynamic";
@@ -539,9 +531,10 @@ export default async function HomePage() {
           <div className="overflow-hidden">
             <div className="flex gap-6 py-8 min-w-max animate-marquee">
               {specializations.concat(specializations).map((item, index) => (
-                <div
+                <Link
                   key={`${item.id}-${index}`}
-                  className="flex min-w-[320px] max-w-[320px] flex-col items-center text-center p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300"
+                  href="/specialisation"
+                  className="flex min-w-[320px] max-w-[320px] flex-col items-center text-center p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1"
                 >
                   <div className="relative mb-8 h-40 w-full overflow-hidden rounded-3xl bg-slate-100">
                     {item.image ? (
@@ -559,7 +552,7 @@ export default async function HomePage() {
                   </p>
 
                   <div className="h-1 w-12 bg-red-600 mt-auto rounded-full" />
-                </div>
+                </Link>
               ))}
             </div>
           </div>

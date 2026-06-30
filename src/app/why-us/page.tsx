@@ -1,6 +1,6 @@
+import { ArrowRight, Award, BadgeCheck, Clock3, Flame, ShieldCheck, Workflow } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, BadgeCheck, Clock3, Flame, ShieldCheck, Workflow } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Why Us - Radiatech Electra",
@@ -124,7 +124,7 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-10">
         <div className="mx-auto max-w-7xl px-6">
           <div className="rounded-[2rem] border border-gray-100 bg-gradient-to-br from-red-700 to-red-900 p-8 text-white shadow-2xl shadow-red-900/20 lg:p-12">
             <div className="max-w-3xl">
@@ -137,26 +137,42 @@ export default function WhyUsPage() {
                   </li>
                 ))}
               </ul>
+              <a
+                href="/contact"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white text-red-600 px-8 py-3 text-base font-bold transition-all duration-300 hover:bg-red-50 hover:shadow-lg hover:shadow-white/20 transform hover:scale-105"
+              >
+                Get Started Now
+                <ArrowRight size={18} />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="pb-20">
+      <section className="py-10">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="rounded-[2rem] border border-gray-100 bg-white p-8 shadow-xl shadow-red-900/10 lg:flex lg:items-center lg:justify-between lg:p-10">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Ready to secure your project with trusted fire protection expertise?</h2>
-              <p className="mt-3 max-w-2xl text-lg text-gray-600">
-                Let’s discuss your requirements and deliver a solution that meets safety, compliance, and performance expectations.
+          <div className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-xl lg:p-12">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Ready to secure your project?</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Connect with our fire protection experts to discuss your requirements and discover how we can deliver comprehensive solutions that meet your safety, compliance, and performance expectations.
               </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 text-white px-8 py-4 text-base font-bold transition-all duration-300 hover:bg-red-700 hover:shadow-lg hover:scale-105"
+                >
+                  Contact Us
+                  <ArrowRight size={18} />
+                </a>
+                <a
+                  href="tel:+919876543210"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-red-600 text-red-600 px-8 py-4 text-base font-bold transition-all duration-300 hover:bg-red-50 hover:shadow-lg hover:scale-105"
+                >
+                  Call Now
+                </a>
+              </div>
             </div>
-            <a
-              href="/contact"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/20 lg:mt-0"
-            >
-              Contact Us
-            </a>
           </div>
         </div>
       </section>

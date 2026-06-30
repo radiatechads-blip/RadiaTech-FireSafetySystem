@@ -5,7 +5,7 @@ import { companyInfo } from "@/data/company";
 
 export default function WhatsAppButton() {
   const message = encodeURIComponent(
-    "Hello Radiatech Electra! I'm interested in your PPR-C piping products. Can you please share more details?"
+    "Hello Radiatech Electra! I'm interested in your fire protection products. Can you please share more details?"
   );
 
   return (

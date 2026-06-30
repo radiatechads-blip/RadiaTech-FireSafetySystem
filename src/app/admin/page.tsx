@@ -1,11 +1,11 @@
 "use client";
 
+import AdminShell from "@/components/admin/AdminShell";
+import { BookOpenText, FolderTree, Inbox, Package, Sparkles, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BookOpenText, FolderTree, Inbox, Package, Sparkles, TrendingUp } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import AdminShell from "@/components/admin/AdminShell";
 
 interface Inquiry {
   id: string;
@@ -103,8 +103,8 @@ export default function AdminDashboard() {
       }
     >
       {loading ? (
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {[1, 2, 3, 4].map((item) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {[1, 2, 3, 4, 5].map((item) => (
             <div key={item} className="h-32 animate-pulse border border-slate-200 bg-white" />
           ))}
         </div>
@@ -112,7 +112,7 @@ export default function AdminDashboard() {
         <div className="border border-red-200 bg-red-50 px-5 py-6 text-sm font-medium text-red-700">{error}</div>
       ) : (
         <div className="space-y-6">
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {statCards.map((card) => {
               const Icon = card.icon;
               return (
@@ -218,6 +218,7 @@ export default function AdminDashboard() {
                   data={[
                     { name: "Products", value: stats?.products ?? 0, fill: "#1e40af" },
                     { name: "Categories", value: stats?.categories ?? 0, fill: "#0891b2" },
+                    { name: "Specializations", value: stats?.specializations ?? 0, fill: "#7c3aed" },
                     { name: "Blog Posts", value: stats?.blogs ?? 0, fill: "#059669" },
                     { name: "Total Inquiries", value: stats?.inquiries.total ?? 0, fill: "#ca8a04" },
                   ]}
@@ -228,8 +229,8 @@ export default function AdminDashboard() {
                   <YAxis type="category" dataKey="name" tick={{ fontSize: 12, fill: "#64748b" }} width={90} />
                   <Tooltip contentStyle={{ fontSize: 12, borderRadius: 0, border: "1px solid #e2e8f0" }} />
                   <Bar dataKey="value" name="Count" radius={[0, 2, 2, 0]}>
-                    {[0, 1, 2, 3].map((index) => (
-                      <Cell key={`bar-${index}`} fill={["#1e40af", "#0891b2", "#059669", "#ca8a04"][index]} />
+                    {[0, 1, 2, 3, 4].map((index) => (
+                      <Cell key={`bar-${index}`} fill={["#1e40af", "#0891b2", "#7c3aed", "#059669", "#ca8a04"][index]} />
                     ))}
                   </Bar>
                 </BarChart>

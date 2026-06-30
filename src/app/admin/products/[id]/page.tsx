@@ -257,8 +257,8 @@ export default function AdminProductForm({ params }: { params: Promise<{ id: str
         <section className="border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="mb-4 text-lg font-semibold text-slate-950">More Details</h2>
           <div className="grid gap-4 lg:grid-cols-2">
-            <Field label="Key Details"><textarea rows={8} value={form.specificationText} onChange={(event) => setForm({ ...form, specificationText: event.target.value })} placeholder={"Material: PPR-C\nSize Range: 20MM to 615 mm\nPressure Rating: PN 6 to PN 20"} className="admin-input resize-none" /></Field>
-            <Field label="Applications"><textarea rows={8} value={form.applicationsText} onChange={(event) => setForm({ ...form, applicationsText: event.target.value })} placeholder={"Water Supply\nChemical Plants\nCooling Towers"} className="admin-input resize-none" /></Field>
+            <Field label="Key Details"><textarea rows={8} value={form.specificationText} onChange={(event) => setForm({ ...form, specificationText: event.target.value })} placeholder={"Material: Fire Protection\nSize Range: 20MM to 615 mm\nPressure Rating: PN 6 to PN 20"} className="admin-input resize-none" /></Field>
+            <Field label="Applications"><textarea rows={8} value={form.applicationsText} onChange={(event) => setForm({ ...form, applicationsText: event.target.value })} placeholder={"Industrial\nBuilding\nCommercial"} className="admin-input resize-none" /></Field>
           </div>
         </section>
 
