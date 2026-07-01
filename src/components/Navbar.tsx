@@ -58,6 +58,39 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* WebsiteSwitchBar */}
+      <section className="relative overflow-hidden">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B4EA2] via-[#5B2DA8] to-[#D90429]" />
+
+        {/* Light Effect */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="h-full w-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,.15),transparent_70%)]" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto h-[48px] flex">
+          {/* Left */}
+          <Link
+            href="https://radia-tech.vercel.app"
+            className="group w-1/2 flex items-center justify-center transition-all duration-300"
+          >
+            <div className="text-center text-white">
+              <h3 className="font-semibold text-lg hover:underline">Radiatech Electra</h3>
+            </div>
+          </Link>
+
+          {/* Right */}
+          <Link
+            href="https://radiatech-firesafetysystem.vercel.app"
+            className="group w-1/2 flex items-center justify-center transition-all duration-300"
+          >
+            <div className="text-center text-white">
+              <h3 className="font-semibold text-lg hover:underline">Radiatech Fire Safety</h3>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Main Nav */}
       <nav className="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
