@@ -70,24 +70,24 @@ export default function Navbar() {
 
         <div className="relative max-w-7xl mx-auto h-[48px] flex">
           {/* Left */}
-          <Link
+          <a
             href="https://radia-tech.vercel.app"
             className="group w-1/2 flex items-center justify-center transition-all duration-300"
           >
             <div className="text-center text-white">
               <h3 className="font-semibold text-lg hover:underline">Radiatech Electra</h3>
             </div>
-          </Link>
+          </a>
 
           {/* Right */}
-          <Link
+          <a
             href="https://radiatech-firesafetysystem.vercel.app"
             className="group w-1/2 flex items-center justify-center transition-all duration-300"
           >
             <div className="text-center text-white">
               <h3 className="font-semibold text-lg hover:underline">Radiatech Fire Safety</h3>
             </div>
-          </Link>
+          </a>
         </div>
       </section>
 
